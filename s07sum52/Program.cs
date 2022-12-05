@@ -60,13 +60,11 @@ void GetSumNumbersInColumn(int[,] arr)
     for (int j = 0; j < arr.GetLength(1); j++)
     {
         int sum = 0;
-        int count = 0;
         for (int i = 0; i < arr.GetLength(0); i++)
         {
             sum = sum + arr[i, j];
-            count++;
         }
-        double sumAverage = (double)sum / count;
+        double sumAverage = (double)sum / arr.GetLength(0);
         Console.Write($"{sumAverage}; ");
     }
 }
