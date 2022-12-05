@@ -6,6 +6,7 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+Console.Clear();
 
 int m = GetNumberFromUser("Введите число строк в массиве: ", "Ошибка ввода!");
 int n = GetNumberFromUser("Введите число столбцов в массиве: ", "Ошибка ввода!");
@@ -13,6 +14,7 @@ int n = GetNumberFromUser("Введите число столбцов в мас�
 int[,] array = GetArray(m, n, -10, 10);
 PrintArray(array);
 
+Console.Write("Среднее арифметическое каждого столбца: ");
 GetSumNumbersInColumn(array);
 
 
@@ -65,6 +67,6 @@ void GetSumNumbersInColumn(int[,] arr)
             count++;
         }
         double sumAverage = (double)sum / count;
-        Console.WriteLine($"Среднее арифметическое столбца {j} = {sumAverage}");
+        Console.Write($"{sumAverage}; ");
     }
 }
